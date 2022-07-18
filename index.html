@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head> 
+<body>
+  <div class="container">
+    <header class="header">
+
+      <img class="logo" src="./images/logo.svg" alt="logo">
+
+      <img class="hamburger" src="./images/icon-menu.svg">
+
+      <div class="overlay hidden">
+        <div class="mobile-menu">
+          <img class="close-menu" src="./images/icon-close-menu.svg" alt="Close menu">
+
+          <nav class="mobile-nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a class="nav-link mobile-features" href="/">Features <img class="down-arrow" src="./images/icon-arrow-down.svg"></a>
+                <ul class="nested-list hidden mobile-features-dropdown">
+                  <li class="nav-item"><a class="nav-link" href="/"><img class="nav-icon" src="./images/icon-todo.svg" alt="">Todo List</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/"><img class="nav-icon" src="./images/icon-calendar.svg" alt="">Calendar</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/"><img class="nav-icon" src="./images/icon-reminders.svg" alt="">Reminders</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/"><img class="nav-icon" src="./images/icon-planning.svg" alt="">Planning</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mobile-company" href="/">Company <img class="down-arrow" src="./images/icon-arrow-down.svg"></a>
+                <ul class="nested-list hidden mobile-company-dropdown">
+                  <li class="nav-item"><a class="nav-link" href="/">History</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/">Our Team</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/">Blog</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="/">Careers</a></li>
+              <li class="nav-item"><a class="nav-link" href="/">About</a></li>
+            </ul>
+    
+            <ul class="login-and-register">
+              <li class="nav-item" ><a class="nav-link" href="/">Login</a></li>
+              <li class="nav-item" ><a class="nav-link register" href="/">Register</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link desktop-features" href="/">Features <img class="down-arrow" src="./images/icon-arrow-down.svg"></a>
+            <ul class="nested-list hidden desktop-features-dropdown">
+              <li class="nav-item"><a class="nav-link" href="/"><img class="nav-icon" src="./images/icon-todo.svg" alt="">Todo List</a></li>
+              <li class="nav-item"><a class="nav-link" href="/"><img class="nav-icon" src="./images/icon-calendar.svg" alt="">Calendar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/"><img class="nav-icon" src="./images/icon-reminders.svg" alt="">Reminders</a></li>
+              <li class="nav-item"><a class="nav-link" href="/"><img class="nav-icon" src="./images/icon-planning.svg" alt="">Planning</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link desktop-company" href="/">Company <img class="down-arrow" src="./images/icon-arrow-down.svg"></a>
+            <ul class="nested-list hidden desktop-company-dropdown">
+              <li class="nav-item"><a class="nav-link" href="/">History</a></li>
+              <li class="nav-item"><a class="nav-link" href="/">Our Team</a></li>
+              <li class="nav-item"><a class="nav-link" href="/">Blog</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="/">Careers</a></li>
+          <li class="nav-item"><a class="nav-link" href="/">About</a></li>
+        </ul>
+
+        <ul class="login-and-register">
+          <li class="nav-item" ><a class="nav-link" href="/">Login</a></li>
+          <li class="nav-item" ><a class="nav-link register" href="/">Register</a></li>
+        </ul>
+      </nav>
+
+    </header>
+    
+    <main class="main">
+      <section class="text-content">
+        <h1>Make remote work</h1>
+
+        <p>Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.</p>
+
+        <a class="learn-more" href="/">Learn more</a>
+
+       
+        <ul class="clients">
+          <li><img src="./images/client-databiz.svg" class="client-brand" alt="databiz"></li>
+          <li><img src="./images/client-audiophile.svg" class="client-brand" alt="audiophile"></li>
+          <li><img src="./images/client-meet.svg" class="client-brand" alt="meet"></li>
+          <li><img src="./images/client-maker.svg" class="client-brand" alt="maker"></li>
+        </ul>
+      
+      </section>
+
+      <section class="background-image">
+
+      </section>
+    </main>
+  </div>
+  
+  
+  <!--<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>-->
+  <script src="./script.js"></script>
+</body>
+</html>

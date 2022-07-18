@@ -1,0 +1,353 @@
+/********************************************
+                Basic Styles
+********************************************/
+
+html{
+    font-family: 'Epilogue', sans-serif;
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    color:hsl(0, 0%, 41%);
+    position: relative;
+}
+
+/********************************************
+                Mobile Layout
+********************************************/
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.hamburger{
+    cursor: pointer;
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    background-color: hsla(0, 0%, 8%, 0.7);
+    height: 100%;
+    width: 100%;
+    z-index: 2;  
+    animation: fade-in 0.5s ease-out;
+}
+
+@keyframes fade-in{
+    0%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opactiy: 1;
+    }
+}
+
+.mobile-menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color:hsl(0, 0%, 98%);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 65%;
+    padding: 1.25em;
+    animation: slide-left 0.5s ease-out;
+}
+
+@keyframes slide-left{
+    0%
+    {
+        opacity: 0;
+        transform: translateX(130%);
+    }
+
+    100%
+    {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+.mobile-nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.close-menu{
+    align-self: flex-end;
+}
+
+.nav-list, .login-and-register{
+    display: flex;
+    flex-direction: column;
+    gap: 1.1em;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-link{
+    color:hsl(0, 0%, 41%);
+    text-decoration: none;
+}
+
+
+.down-arrow{
+    display: inline-block;
+    margin-left: 0.5em;
+}
+
+.nested-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 0 0 1.5em;
+    animation: drop-down 0.5s ease-out;   
+}
+
+@keyframes drop-down{
+    0% {
+    opacity: 0;
+    transform: translateY(-10%);
+    }
+    100% 
+    {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+.nav-icon{
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+.hidden{
+    display: none;
+}
+
+.login-and-register{
+    align-self: center;
+    text-align: center;
+}
+
+.register{
+    border: 1px solid hsl(0, 0%, 41%);
+    border-radius: 15px;
+    padding: 0.6em 1em;
+    left: 1em;
+    right: 1em;
+    position: absolute;
+}
+
+.container{
+    background-color: hsl(0, 0%, 98%);
+    min-height: inherit;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    margin-top: 1em;
+    padding-bottom: 4em;
+}
+
+.background-image{
+    background-image: url('./images/image-hero-mobile.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    grid-row: 1 / 2;
+    min-height: 50vh;
+}
+
+.text-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    padding: 0 1em;
+    grid-row: 2 / -1;
+}
+
+h1{
+    color:  hsl(0, 0%, 8%);
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.learn-more{
+    padding: 0.5em 1.2em;
+    color:hsl(0, 0%, 98%);
+    background-color:hsl(0, 0%, 8%);
+    border: 1px solid hsl(0, 0%, 8%);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.learn-more:hover, .learn-more:focus{
+    color: hsl(0, 0%, 8%);
+    background-color: hsl(0, 0%, 98%);
+}
+
+.clients{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    padding: 0;
+}
+
+.navbar{
+    display: none;
+}
+
+/********************************************
+                Desktop Layout
+********************************************/
+
+@media screen and (min-width: 1025px){
+
+    .header{
+        padding: 1em 2.5em;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .navbar{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .nav-list, .login-and-register{
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2em;
+    }
+
+    .down-arrow{
+        margin-left: 0.2em;
+    }
+
+    .nav-list{
+        margin-left: 3em;
+    }
+
+    .register{
+        border: 1px solid hsl(0, 0%, 41%);
+        border-radius: 15px;
+        padding: 0.6em 1em;
+        position: static;
+    }
+
+    .main{
+        display: grid;
+        grid-template-columns: 38% 60%;
+        grid-template-rows: auto;
+        justify-content: space-between;
+        margin-top: 3.5em;
+        padding: 4em 1em 4em 7em;
+    }
+
+    h1{
+        font-size: 6.2rem;
+        margin-bottom: 0.3em;
+    }
+
+    .text-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: start;
+        padding: 5em 1em 0;
+        grid-column: 1 / 2;
+        grid-row: 1 / -1;
+        height: 100%;
+    }
+
+    .learn-more{
+        margin: 1.75em 0;
+    }
+
+    .clients{
+        margin-top: 2em;
+        margin-bottom: 0;
+    }
+
+    .background-image{
+        background-image: url('./images/image-hero-desktop.png');
+        background-size: 60% 100%;
+        background-position: center;
+        grid-column: 2 / -1;
+        grid-row: 1 / 1;
+    }
+
+    .desktop-features, .desktop-company{
+        position: relative;
+    }
+
+    .desktop-features-dropdown, .desktop-company-dropdown{
+        position: absolute;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 12px;
+        padding: 2em;
+        box-shadow: 0 0 1em hsla(0, 0%, 41%, 0.5);
+        transform: translateY(10%); 
+    }
+    .desktop-features-dropdown{
+        transform: translate(-45%, 10%);
+        animation: features-drop-down 0.5s ease-out;
+    }
+
+    @keyframes drop-down{
+        0% {
+        opacity: 0;
+        transform: translateY(0);
+        }
+        100% 
+        {
+        opacity: 1;
+        transform: translateY(10%);
+        }
+    }
+
+    @keyframes features-drop-down{
+        0% {
+        opacity: 0;
+        transform: translate(-45%, 0);
+        }
+        100% 
+        {
+        opacity: 1;
+        transform: translate(-45%, 10%);
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
