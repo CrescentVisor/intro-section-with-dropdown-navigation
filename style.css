@@ -347,8 +347,20 @@ h1{
     
 }
 
+@media screen and (min-width: 1400px){
+    h1{
+        font-size: 6.50rem;
+    }
 
-
+    .main{
+        display: grid;
+        grid-template-columns: 35% 60%;
+        grid-template-rows: auto;
+        justify-content: space-between;
+        margin-top: 3.5em;
+        padding: 4em 1em 4em 7em;
+    }
+}
 
 
 
