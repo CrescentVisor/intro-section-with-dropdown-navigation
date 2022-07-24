@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github Repo](https://github.com/CrescentVisor/intro-section-with-dropdown-navigation)
-- Live Site URL: [Github Page](https://crescentvisor.github.io/intro-section-with-dropdown-navigation)
+- Solution URL: [Github Repo](https://github.com/jaheemprevost/intro-section-with-dropdown-navigation)
+- Live Site URL: [Github Page](https://jaheemprevost.github.io/intro-section-with-dropdown-navigation)
 
 ## My process
 
